@@ -1,0 +1,35 @@
+Aquí tienes los pasos para hacerlo:
+
+Instalar PM2:
+
+bash
+Copiar código
+    npm install pm2 -g
+Levantar tu aplicación: Navega a la carpeta de tu proyecto donde tienes el archivo package.json y ejecuta:
+
+bash
+Copiar código
+    pm2 start npm --name "nombre-del-backend" -- run dev
+Esto levantará tu backend con el comando npm run dev.
+
+Guardar la configuración de PM2: Para asegurarte de que tu aplicación se reinicie automáticamente después de un reinicio del servidor, ejecuta:
+
+bash
+Copiar código
+    pm2 save
+Configurar PM2 para iniciar al arranque del sistema:
+
+bash
+Copiar código
+    pm2 startup
+Esto generará un comando que tendrás que ejecutar con sudo para configurar PM2 como un servicio que se inicia automáticamente.
+
+Verificar que todo está corriendo bien:
+
+bash
+Copiar código
+    pm2 status
+Esto te mostrará el estado de tu aplicación.
+
+Con esto, tu backend estará corriendo de manera estable y podrás manejarlo fácilmente en tu
+
